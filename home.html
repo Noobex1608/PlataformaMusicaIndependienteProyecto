@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoundBridge | Plataforma Musical Independiente</title>
+  <title>SoundBridge | Conecta con tu audiencia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,7 +11,7 @@
   <!-- Header Global -->
   <header class="main-header">
     <div class="logo">
-      <img src="logo.svg" alt="SoundBridge">
+      <h2>SoundBridge</h2>
     </div>
     <nav class="main-nav">
       <ul>
@@ -29,11 +29,11 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Conecta con tu <span>audiencia</span> como nunca antes</h1>
+      <h1>Conecta con tu <span class="highlight">audiencia</span> como nunca antes</h1>
       <p>La plataforma donde artistas independientes y fans crean juntos.</p>
       <div class="cta-buttons">
-        <a href="#artistas" class="btn-primary">Soy Artista</a>
-        <a href="#usuarios" class="btn-secondary">Explorar Música</a>
+        <a href="#artistas" class="btn btn-primary">Soy Artista</a>
+        <a href="#usuarios" class="btn btn-secondary">Explorar Música</a>
       </div>
     </div>
     <div class="hero-image">
@@ -41,11 +41,10 @@
     </div>
   </section>
 
-  
   <!-- Módulo Artistas (Preview) -->
   <section id="artistas" class="module-preview artist-module">
     <div class="preview-content">
-      <h2>Herramientas <span>para artistas</span></h2>
+      <h2>Herramientas <span class="highlight">para artistas</span></h2>
       <div class="features">
         <div class="feature-card">
           <div class="icon">🎤</div>
@@ -54,8 +53,8 @@
         </div>
         <div class="feature-card">
           <div class="icon">📊</div>
-          <h3>Estadísticas en tiempo real</h3>
-          <p>Mide el impacto de tu música.</p>
+          <h3>Dashboard artista</h3>
+          <p>Estadísticas en tiempo real para medir tu impacto.</p>
         </div>
       </div>
       <a href="/artist-dashboard.html" class="module-link">Ver dashboard completo →</a>
@@ -64,25 +63,27 @@
       <img src="artist-preview.png" alt="Dashboard artista">
     </div>
   </section>
-<!-- Módulo Usuarios (Preview) -->
-<section id="usuarios" class="module-preview user-module">
-  <div class="preview-image">
-    <img src="user-preview.png" alt="Interfaz usuario">
-  </div>
-  <div class="preview-content">
-    <h2>Experiencia <span>para fans</span></h2>
-    <ul class="feature-list">
-      <li>💬 Comentarios con timestamp en canciones</li>
-      <li>🌟 Sistema de valoración por categorías</li>
-      <li>🔔 Notificaciones de nuevos lanzamientos</li>
-    </ul>
-    <a href="/user-discover.html" class="module-link">Explorar artistas →</a>
-  </div>
-</section>
+
+  <!-- Módulo Usuarios (Preview) -->
+  <section id="usuarios" class="module-preview user-module">
+    <div class="preview-image">
+      <img src="user-preview.png" alt="Interfaz usuario">
+    </div>
+    <div class="preview-content">
+      <h2>Experiencia <span class="highlight">para fans</span></h2>
+      <ul class="feature-list">
+        <li>💬 Comentarios con timestamp en canciones</li>
+        <li>🌟 Sistema de valoración por categorías</li>
+        <li>🔔 Notificaciones de nuevos lanzamientos</li>
+      </ul>
+      <a href="/user-discover.html" class="module-link">Explorar artistas →</a>
+    </div>
+  </section>
+
   <!-- Módulo Monetización (Preview) -->
   <section id="membresias" class="module-preview monetization-module">
     <div class="preview-content">
-      <h2>Membresías <span>exclusivas</span></h2>
+      <h2>Membresías <span class="highlight">exclusivas</span></h2>
       <p>Apoya a tus artistas favoritos y accede a beneficios:</p>
       <div class="tier-badge">
         <div class="tier">
@@ -90,36 +91,39 @@
           <p class="price">$5/mes</p>
         </div>
         <div class="tier popular">
+          <div class="popular-badge">Popular</div>
           <h4>Super Fan</h4>
           <p class="price">$15/mes</p>
         </div>
       </div>
-      <a href="/memberships.html" class="btn-primary">Comparar planes</a>
+      <a href="/memberships.html" class="btn btn-primary">Comparar planes</a>
     </div>
     <div class="preview-image">
       <img src="membership-preview.png" alt="Membresías">
     </div>
   </section>
-  
-<!-- Footer -->
-<footer class="main-footer">
-  <div class="footer-links">
-    <div class="link-group">
-      <h5>SoundBridge</h5>
-      <a href="#">Sobre nosotros</a>
-      <a href="#">Contacto</a>
-    </div>
-    <div class="link-group">
-      <h5>Legal</h5>
-      <a href="#">Términos</a>
-      <a href="#">Privacidad</a>
-    </div>
-  </div>
-  <div class="social-links">
-    <a href="#"><img src="icon-facebook.svg" alt="Facebook"></a>
-    <a href="#"><img src="icon-instagram.svg" alt="Instagram"></a>
-  </div>
-</footer>
-</body>
 
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-links">
+      <div class="link-group">
+        <h5>SoundBridge</h5>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="link-group">
+        <h5>Legal</h5>
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="#"><img src="icon-facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="icon-instagram.svg" alt="Instagram"></a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Plataforma Musical SoundBridge</p>
+    </div>
+  </footer>
+</body>
 </html>
