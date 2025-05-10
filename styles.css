@@ -543,114 +543,245 @@ body {
   position: absolute;
   left: 0;
 }
+/* Sección Artistas - Versión Premium */
+.artist-module {
+  background: linear-gradient(145deg, var(--lighter) 0%, var(--light) 100%);
+  position: relative;
+  overflow: hidden;
+}
 
-/* Estilos específicos para el dashboard artista */
+.artist-module::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(107, 212, 205, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.artist-module .preview-content {
+  position: relative;
+  z-index: 1;
+}
+
+.artist-module h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.artist-module h2 .highlight {
+  background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grid de características mejorado */
+.artist-module .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.artist-module .feature-card {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  border: 1px solid rgba(107, 212, 205, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-module .feature-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, 
+              rgba(107, 212, 205, 0.1) 0%, 
+              transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.artist-module .feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(107, 212, 205, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.artist-module .feature-card:hover::before {
+  opacity: 1;
+}
+
+.artist-module .feature-card .icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: rgba(107, 212, 205, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.artist-module .feature-card:hover .icon {
+  background: rgba(107, 212, 205, 0.2);
+  transform: scale(1.1);
+}
+
+.artist-module .feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.artist-module .feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Enlace del dashboard */
+.artist-module .module-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: rgba(107, 212, 205, 0.1);
+  border-radius: var(--radius-lg);
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(107, 212, 205, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-module .module-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(107, 212, 205, 0.2), 
+              transparent);
+  transition: all 0.6s ease;
+}
+
+.artist-module .module-link:hover {
+  background: rgba(107, 212, 205, 0.2);
+  padding-right: 32px;
+  box-shadow: 0 4px 12px rgba(107, 212, 205, 0.2);
+}
+
+.artist-module .module-link:hover::before {
+  left: 100%;
+}
+
+.artist-module .module-link span {
+  transition: transform 0.3s ease;
+}
+
+.artist-module .module-link:hover span {
+  transform: translateX(5px);
+}
+
+/* Imagen del dashboard */
 .artist-module .preview-image {
   position: relative;
-  max-width: 65%; /* Reducción del tamaño */
+  z-index: 1;
+  max-width: 70%;
   margin: 0 auto;
 }
 
 .artist-module .preview-image img {
   width: 100%;
-  height: auto;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(168, 168, 192, 0.2);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+  transition: all 0.5s ease;
 }
 
 .artist-module .preview-image:hover img {
-  transform: scale(1.02);
+  transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
 }
 
-/* Mejoras para las cards de características */
-.artist-module .feature-card {
-  background: linear-gradient(145deg, var(--light) 0%, var(--lighter) 100%);
-  border: 1px solid rgba(107, 212, 205, 0.1);
-  padding: 20px;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
+/* Efecto de sombra debajo de la imagen */
+.artist-module .preview-image::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 30px;
+  background: radial-gradient(ellipse at center, 
+              rgba(0,0,0,0.4) 0%, 
+              transparent 70%);
+  z-index: -1;
+  filter: blur(8px);
 }
 
-.artist-module .feature-card .icon {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  background: rgba(107, 212, 205, 0.1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.artist-module .feature-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.artist-module .feature-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  flex-grow: 1;
-}
-
-/* Estilo para el enlace del dashboard */
-.artist-module .module-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: rgba(107, 212, 205, 0.1);
-  border-radius: var(--radius-lg);
-  transition: all 0.3s ease;
-}
-
-.artist-module .module-link:hover {
-  background: rgba(107, 212, 205, 0.2);
-  padding-right: 25px;
-}
-
-/* Estilos para los elementos de subsidi */
-.artist-module .subsidi-section {
-  margin-top: 30px;
-  padding: 15px;
-  background: rgba(168, 168, 192, 0.05);
-  border-radius: var(--radius-sm);
-  border-left: 3px solid var(--primary);
-}
-
-.artist-module .subsidi-section strong {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 5px;
-}
-
-.artist-module .subsidi-section p {
-  font-size: 1.1rem;
-  margin: 0;
-  color: var(--primary);
-  font-weight: 600;
-}
-
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .artist-module .preview-image {
-    max-width: 90%;
-    margin-bottom: 30px;
+/* Responsive */
+@media (max-width: 992px) {
+  .artist-module h2 {
+    font-size: 2.2rem;
   }
   
   .artist-module .features {
     grid-template-columns: 1fr;
-    gap: 15px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .artist-module .module-preview {
+    flex-direction: column;
   }
   
-  .artist-module .feature-card {
-    min-height: auto;
-    padding: 15px;
+  .artist-module h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .artist-module .module-link {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .artist-module .preview-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  
+  .artist-module .preview-image img {
+    transform: none;
+  }
+  
+  .artist-module .preview-image:hover img {
+    transform: scale(1.02);
   }
 }
 /* Features */
