@@ -1,12 +1,17 @@
-/* styles.css */
+/* styles.css - Tema Oscuro */
 :root {
-  --primary: #6BD4CD;
-  --secondary: #7E7EA1;
-  --dark: #2E2E2E;
-  --light: #F7F5F9;
-  --white: #FFFFFF;
-  --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+  --primary: #6BD4CD;           /* Turquesa brillante (se mantiene) */
+  --primary-dark: #4AB5AD;      /* Turquesa más oscuro */
+  --secondary: #A8A8C0;         /* Lavanda suave */
+  --dark: #121212;              /* Fondo oscuro principal */
+  --darker: #0A0A0A;            /* Fondo más oscuro */
+  --light: #1E1E1E;             /* Superficies oscuras */
+  --lighter: #2E2E2E;           /* Superficies más claras */
+  --text: #E0E0E0;              /* Texto principal */
+  --text-secondary: #B0B0B0;    /* Texto secundario */
+  --white: #FFFFFF;             /* Blanco puro */
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 50px;
@@ -15,9 +20,10 @@
 /* Reset y estilos base */
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--dark);
+  color: var(--text);
   margin: 0;
   line-height: 1.6;
+  background-color: var(--dark);
 }
 
 * {
@@ -30,7 +36,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background: var(--white);
+  background: var(--darker);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
@@ -52,7 +58,7 @@ body {
 }
 
 .nav-link {
-  color: var(--dark);
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -84,7 +90,16 @@ body {
 .btn-signup {
   background: var(--primary);
   border: 2px solid var(--primary);
-  color: var(--white);
+  color: var(--darker);
+}
+
+.btn-login:hover {
+  background: rgba(107, 212, 205, 0.1);
+}
+
+.btn-signup:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
 /* Hero Section */
@@ -92,7 +107,7 @@ body {
   display: flex;
   align-items: center;
   padding: 80px 5%;
-  background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+  background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
 }
 
 .hero-content {
@@ -103,6 +118,7 @@ body {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: var(--white);
 }
 
 .highlight {
@@ -112,7 +128,7 @@ body {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: var(--secondary);
+  color: var(--text-secondary);
 }
 
 .cta-buttons {
@@ -131,12 +147,13 @@ body {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--white);
+  color: var(--darker);
   border: 2px solid var(--primary);
 }
 
 .btn-primary:hover {
-  background: darken(var(--primary), 10%);
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
 .btn-secondary {
@@ -146,8 +163,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: var(--primary);
-  color: var(--white);
+  background: rgba(107, 212, 205, 0.1);
 }
 
 .hero-image {
@@ -159,6 +175,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
 
 /* Módulos Preview */
@@ -187,7 +204,7 @@ body {
 
 /* Artist Module */
 .artist-module {
-  background: var(--white);
+  background: var(--lighter);
 }
 
 /* User Module */
@@ -204,6 +221,7 @@ body {
   margin-bottom: 15px;
   padding-left: 30px;
   position: relative;
+  color: var(--text-secondary);
 }
 
 .feature-list li:before {
@@ -222,10 +240,11 @@ body {
 }
 
 .feature-card {
-  background: var(--white);
+  background: var(--lighter);
   border-radius: var(--radius-md);
   padding: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
 }
 
 .feature-card:hover {
@@ -236,16 +255,21 @@ body {
 .feature-card .icon {
   font-size: 2rem;
   margin-bottom: 15px;
+  color: var(--primary);
 }
 
 .feature-card h3 {
   margin-top: 0;
-  color: var(--dark);
+  color: var(--white);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
 }
 
 /* Monetization Module */
 .monetization-module {
-  background: var(--white);
+  background: var(--lighter);
 }
 
 .tier-badge {
@@ -256,13 +280,14 @@ body {
 
 .tier {
   flex: 1;
-  background: var(--white);
+  background: var(--light);
   border-radius: var(--radius-md);
   padding: 20px;
   text-align: center;
   position: relative;
   border: 2px solid var(--light);
   transition: all 0.3s ease;
+  color: var(--text);
 }
 
 .tier:hover {
@@ -278,7 +303,7 @@ body {
   top: -10px;
   right: 20px;
   background: var(--primary);
-  color: var(--white);
+  color: var(--darker);
   padding: 3px 15px;
   border-radius: var(--radius-lg);
   font-size: 0.8rem;
@@ -287,6 +312,7 @@ body {
 
 .tier h4 {
   margin-top: 0;
+  color: var(--white);
 }
 
 .price {
@@ -311,8 +337,8 @@ body {
 
 /* Footer */
 .main-footer {
-  background: var(--dark);
-  color: var(--white);
+  background: var(--darker);
+  color: var(--text);
   padding: 50px 5%;
 }
 
@@ -335,7 +361,7 @@ body {
 
 .link-group a {
   display: block;
-  color: var(--light);
+  color: var(--text-secondary);
   text-decoration: none;
   margin-bottom: 10px;
   transition: color 0.3s ease;
@@ -356,6 +382,7 @@ body {
   height: 24px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+  filter: invert(1);
 }
 
 .social-links img:hover {
@@ -367,6 +394,7 @@ body {
   margin-top: 50px;
   padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-secondary);
 }
 
 /* Responsive */
