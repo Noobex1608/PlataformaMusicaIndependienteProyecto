@@ -33,3 +33,51 @@ body {
   padding: 80px 5%;
   background: linear-gradient(135deg, var(--light) 0%, white 100%);
 }
+.hero-content {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.module-preview {
+  display: flex;
+  padding: 60px 5%;
+  align-items: center;
+}
+
+.artist-module {
+  background: white;
+}
+
+.user-module {
+  background: var(--light);
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tier {
+  display: inline-block;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 15px 25px;
+  margin: 10px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
