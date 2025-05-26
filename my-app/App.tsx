@@ -1,5 +1,5 @@
 import './App.css'
-import ArtistModule from './components/ArtistModule';
+import ArtistModule from './ArtistModule';
 
 function App() {
   return (

@@ -157,7 +157,7 @@ const ArtistModule: React.FC = () => {
   };
 
   return (
-    <section className="artist-module" style={{ padding: '4rem 1.5rem', background: 'linear-gradient(to bottom right, var(--lighter), var(--light))', position: 'relative', overflow: 'hidden'}}> 
+    <section className="Artistmodule" style={{ padding: '4rem 1.5rem', background: 'linear-gradient(to bottom right, var(--lighter), var(--light))', position: 'relative', overflow: 'hidden'}}> 
       <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '80%', height: '200%', background: 'radial-gradient(circle, rgba(107,212,205,0.1) 0%, transparent 70%)', zIndex: 0 }}></div>
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '1140px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '2.25rem', fontWeight: '700', color: 'var(--white)', marginBottom: '3rem', textAlign: 'center' }}>
